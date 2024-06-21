@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "awesome_package"
+version = "0.0.1"
+dependencies = [
+    "numpy<2.0.0"
+]
+requires-python = ">=3.9.18"
+
+[project.scripts]
+cli-name = "awesome_package.module_A:foo" # allows usage of `> cli-name`
+
+
+[tool.setuptools.packages.find]
+where = ["src"]
+exclude = ["dev_tools"]  # alternatively: `include = ["pkg*"]`
+namespaces = false
