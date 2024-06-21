@@ -1,3 +1,18 @@
+# Python Package Template
+This repo serves as a template for python packages.
+
+## (Unit) Tests
+To run auto tests, you do
+```sh
+python -m unittest discover tests/auto/
+```
+
+## Development Tools
+Any development tools, not need in the final package but
+needed in tests are located in dedicated directory `src/dev_tools/`.
+This package is explicitly excluded in the `pyproject.toml` file
+but, nevertheles, still included in editable installs.
+
 ## editable install
 ```sh
 $ cd your-python-project
